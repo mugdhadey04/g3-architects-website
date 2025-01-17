@@ -113,6 +113,43 @@ main > section{
 #quick-list{
     font-weight: 500;
 }
+
+/* feature section related styles */
+.features{
+    gap: 140px;
+}
+#feature-section-title{
+    border-left: 5px solid #ff900e;
+    padding-left: 20px;
+}
+.feature-card{
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+.feature-card .feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#experience-badge{
+    padding: 46px 42px 45px 42px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.featured-architect img{
+    width: 100%;
+}
+
+
 /* some facts related styles */
 .facts-container{
     display: grid;
@@ -158,12 +195,28 @@ main > section{
     filter: grayscale(100%);
 }
 
+/* footer styles */
+footer{
+    width: 100%;
+}
+.footer{
+    margin: 130px 240px 216px 240px;
+    background-color: rgba(255, 244, 231, 1);
+    border-radius: 8px;
+}
+.copyright{
+    text-align: center;
+    font-size: 1.25rem;
+    font-size: 400;
+    padding: 38px 420px;
+}
 
 /* responsive media query */
 @media screen and (max-width:576px) {
     .navbar, 
     .nav-links, 
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
     }
     .teams-image-container, .facts-container, .sponsor-companies{
@@ -179,11 +232,27 @@ main > section{
     .sponsor-companies{
         justify-items: center;
         gap: 50px;
+        margin-bottom: 30px;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    footer{
+        max-width: 500px;
+    }
+    .copyright{
+        justify-content: center;
+        padding: 3px 5px;}
+    .footer{ 
+        justify-content: center;
+        padding: 20px 50px;
+        margin: 0 auto;
     }
 }
 /* medium size device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    .teams{
+    .teams, .features{
         flex-direction: column;
     }
     .our-features{
@@ -193,5 +262,17 @@ main > section{
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
         gap: 24px;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .copyright{
+        justify-content: center;
+        padding: 5px 10px;}
+    .footer{ 
+        justify-content: center;
+        padding: 20px 50px;
+        margin: 20px auto;
     }
 }
